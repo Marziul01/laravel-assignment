@@ -16,7 +16,7 @@ cd laravel-assignment
 
 composer install
 
-3. edit this codes of .env.example
+3. copy the .env.example and create a new file ".env" and remove the comments "#" from the details below
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -34,21 +34,23 @@ php artisan key:generate
 
 php artisan migrate
 
-6. Create new users using sql or seed , and add the last_login_at
+6. Create new users using SQL or seed, and add the last_login_at
 
-sql code :
+SQL code :
 
 INSERT INTO users (name,email,password,last_login_at)
-VALUES ('John','john@test.com','123678', '2024-01-01');
+VALUES ('John','john@test.com','123678', '2026-01-01');
 
-7. now run the Schedule 
+7. Now run the Schedule 
 
-php artisan app:check-inactive-users  ( It will run the schedule to check and put reminder jobs to queue )
+php artisan app:check-inactive-users  ( It will run the schedule to check and put reminder jobs to the queue )
 
 8. run the queue
 
 php artisan queue:work 
 
-9. You can check the laravel.log or database , in both case i am saving everyday the reminder message
+9. You can check the storage/logs/laravel.log
+   or
+   database table "reminders" , in both case i am saving the reminder message every day
 
-# finger crossed it will run 🤞🤞
+# fingers crossed it will run 🤞🤞
