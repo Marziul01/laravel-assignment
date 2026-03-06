@@ -8,14 +8,15 @@ This project automatically detects inactive users and sends a reminder once per 
 
 1. Clone the repository:
 
-```bash
 git clone https://github.com/Marziul01/laravel-assignment.git
+
+cd laravel-assignment
 
 2. Install dependencies: 
 
 composer install
 
-3. Copy .env.example to .env:
+3. edit this codes of .env.example
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
