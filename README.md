@@ -47,3 +47,7 @@ php artisan app:check-inactive-users  ( It will run the schedule to check and pu
 8. run the queue
 
 php artisan queue:work 
+
+9. You can check the laravel.log or database , in both case i am saving everyday the reminder message
+
+# finger crossed it will run 🤞🤞
